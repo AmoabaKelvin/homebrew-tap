@@ -15,7 +15,7 @@ cask "keylight" do
 
   # Keylight updates itself from GitHub releases.
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Keylight.app"
   binary "#{appdir}/Keylight.app/Contents/MacOS/keylight"

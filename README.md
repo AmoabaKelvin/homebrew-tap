@@ -3,7 +3,9 @@
 Homebrew casks for [Keylight](https://github.com/AmoabaKelvin/keylight), the Mac app for the NuPhy Air75 V3.
 
 ```sh
-brew install --cask amoabakelvin/tap/keylight
+brew tap amoabakelvin/tap
+brew trust amoabakelvin/tap   # newer Homebrew asks before loading casks from other taps
+brew install --cask keylight
 ```
 
 Keylight isn't notarised. After installing, open it once and click Open Anyway in System Settings > Privacy & Security, or run `xattr -dr com.apple.quarantine /Applications/Keylight.app`.
