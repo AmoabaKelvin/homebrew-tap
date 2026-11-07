@@ -1,0 +1,11 @@
+#!/bin/sh
+# Points the Keylight cask at a released version: ./bump 0.2.0
+set -eu
+
+version=${1:?usage: ./bump <version>}
+cask="$(dirname "$0")/Casks/keylight.rb"
+url="https://github.com/AmoabaKelvin/keylight/releases/download/v$version/Keylight-$version-universal.zip"
+
+sha=$(curl -fsSL "$url" | shasum -a 256 | cut -d' ' -f1)
+sed -i '' -e "s/^  version \".*\"/  version \"$version\"/" -e "s/^  sha256 \".*\"/  sha256 \"$sha\"/" "$cask"
+echo "keylight $version  $sha"
