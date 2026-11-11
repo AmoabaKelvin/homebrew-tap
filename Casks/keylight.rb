@@ -1,7 +1,7 @@
 cask "keylight" do
-  version "0.3.1"
+  version "0.3.2"
   # Set by ./bump once the release is out. The Release workflow's summary prints it too.
-  sha256 "79972316f91e65c6242cca1bdef84e8ef22d985f426050bea805f18fdfc82704"
+  sha256 "d273ad36336490eb1dfec163a11299e075f4f8561809b632efa0a770aa2553d8"
 
   url "https://github.com/AmoabaKelvin/keylight/releases/download/v#{version}/Keylight-#{version}-universal.zip"
   name "Keylight"
